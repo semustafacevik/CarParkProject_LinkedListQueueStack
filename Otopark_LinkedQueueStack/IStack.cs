@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Otopark_LinkedQueueStack
+{
+    public interface IStack
+    {
+        void Push(Araba yeniAraba);
+        Araba Pop();
+        Boolean IsEmpty();
+        int Top { get; set; }
+    }
+}

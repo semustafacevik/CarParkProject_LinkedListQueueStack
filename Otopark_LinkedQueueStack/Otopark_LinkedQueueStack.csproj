@@ -45,14 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Araba.cs" />
+    <Compile Include="Kat_Bodrum.cs" />
     <Compile Include="Form_AnaEkran.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_AnaEkran.Designer.cs">
       <DependentUpon>Form_AnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="IQueue.cs" />
+    <Compile Include="IStack.cs" />
+    <Compile Include="LinkedListADT.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Kat_Ust.cs" />
+    <Compile Include="Kat_Zemin.cs" />
     <EmbeddedResource Include="Form_AnaEkran.resx">
       <DependentUpon>Form_AnaEkran.cs</DependentUpon>
     </EmbeddedResource>

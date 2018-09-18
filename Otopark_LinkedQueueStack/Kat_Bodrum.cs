@@ -8,22 +8,26 @@ namespace Otopark_LinkedQueueStack
 {
     public class Kat_Bodrum : IStack
     {
-        public Araba[] yigin;
-        private int top = -1;
+        public Araba[] Yigin;
+        private int _top = -1;
 
         public Kat_Bodrum(int arabaSayisi)
         {
-            yigin = new Araba[arabaSayisi];
+            Yigin = new Araba[arabaSayisi];
         }
 
         public void Push(Araba yeniAraba)
         {
-            yigin[++Top] = yeniAraba;
+            Yigin[++Top] = yeniAraba;
         }
 
         public Araba Pop()
         {
-            throw new NotImplementedException();
+            Araba cikacakAraba = Yigin[Top];
+            Yigin[Top] = null;
+            Top--;
+
+            return cikacakAraba;
         }
 
         public bool IsEmpty()
@@ -35,12 +39,12 @@ namespace Otopark_LinkedQueueStack
         {
             get
             {
-                return top;
+                return _top;
             }
 
             set
             {
-                top = value;
+                _top = value;
             }
         }
     }

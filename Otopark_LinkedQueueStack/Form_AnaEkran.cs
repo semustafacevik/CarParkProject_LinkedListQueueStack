@@ -30,6 +30,24 @@ namespace Otopark_LinkedQueueStack
             ArabalariEkle();           
         }
 
+        private void btnCikar_Click(object sender, EventArgs e)
+        {
+            lstCikanUK.Items.Clear();
+            lstCikanZK.Items.Clear();
+            lstCikanBK.Items.Clear();
+
+            Node cikanArab = uKat.Delete();
+            lstCikanUK.Items.Add(cikanArab.Data.ad);
+
+
+            Araba cikanArabaa = zKat.Remove();
+            lstCikanZK.Items.Add(cikanArabaa.ad);
+
+
+            Araba cikanAraba = bKat.Pop();
+            lstCikanBK.Items.Add(cikanAraba.ad);
+        }
+
 
         private void ArabalariEkle()
         {
@@ -68,5 +86,6 @@ namespace Otopark_LinkedQueueStack
                 }
             }
         }
+
     }
 }

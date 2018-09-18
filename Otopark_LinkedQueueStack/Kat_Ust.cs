@@ -30,12 +30,25 @@ namespace Otopark_LinkedQueueStack
             size++;
         }
 
-
-        public override Node Delete()
+        public override Node Delete() 
         {
-            throw new NotImplementedException();
-        }
+            Node cikacakAraba = Head.Next;
 
+            if (cikacakAraba == null)
+                Head = null;
+
+            Head.Next = cikacakAraba.Next;
+            Head = cikacakAraba.Next;
+            size--;
+
+            if (size == 0)
+            {
+                Last = null;
+                Head = null;
+            }
+
+            return cikacakAraba;
+        } // josephus problemine göre silme
 
     }
 }

@@ -60,11 +60,16 @@ namespace Otopark_LinkedQueueStack
 
             foreach (Araba arabalar in Yigin)
             {
-                Araba cikacakAraba = Peek();
+                Araba siradakiAraba;
+
+                if (Top == -1)
+                    siradakiAraba = null;
+                else
+                    siradakiAraba = Peek();
 
                 if (arabalar != null)
                 {
-                    if (arabalar == cikacakAraba)
+                    if (arabalar == siradakiAraba)
                         lstListe.Items.Add("-> " + arabalar.ad);
                     else
                         lstListe.Items.Add(arabalar.ad);

@@ -74,18 +74,18 @@ namespace Otopark_LinkedQueueStack
 
             foreach (Araba arabalar in Kuyruk)
             {
-                Araba cikacakAraba = Peek();
+                Araba siradakiAraba = Peek();
 
                 if (arabalar != null)
                 {
-                    if (arabalar == cikacakAraba)
+                    if (arabalar == siradakiAraba)
                         lstListe.Items.Add("-> " + arabalar.ad);
 
                     else
                         lstListe.Items.Add(arabalar.ad);
                 }
                 else
-                    break;
+                { }
             }
         }
 

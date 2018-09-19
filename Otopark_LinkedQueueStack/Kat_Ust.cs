@@ -70,8 +70,6 @@ namespace Otopark_LinkedQueueStack
             return cikacakAraba;
         } // josephus problemine göre silme
 
-
-
         public void ArabalariListele(ListBox lstListe)
         {
             lstListe.Items.Clear();

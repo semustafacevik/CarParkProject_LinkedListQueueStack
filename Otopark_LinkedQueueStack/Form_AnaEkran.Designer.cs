@@ -36,6 +36,9 @@
             this.lstCikanBK = new System.Windows.Forms.ListBox();
             this.lstCikanUK = new System.Windows.Forms.ListBox();
             this.lstCikanZK = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEkle
@@ -51,26 +54,32 @@
             // 
             // lstUstKat
             // 
+            this.lstUstKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstUstKat.FormattingEnabled = true;
-            this.lstUstKat.Location = new System.Drawing.Point(128, 22);
+            this.lstUstKat.ItemHeight = 16;
+            this.lstUstKat.Location = new System.Drawing.Point(136, 42);
             this.lstUstKat.Name = "lstUstKat";
-            this.lstUstKat.Size = new System.Drawing.Size(178, 212);
+            this.lstUstKat.Size = new System.Drawing.Size(178, 260);
             this.lstUstKat.TabIndex = 1;
             // 
             // lstZeminKat
             // 
+            this.lstZeminKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstZeminKat.FormattingEnabled = true;
-            this.lstZeminKat.Location = new System.Drawing.Point(328, 22);
+            this.lstZeminKat.ItemHeight = 16;
+            this.lstZeminKat.Location = new System.Drawing.Point(336, 42);
             this.lstZeminKat.Name = "lstZeminKat";
-            this.lstZeminKat.Size = new System.Drawing.Size(178, 212);
+            this.lstZeminKat.Size = new System.Drawing.Size(178, 260);
             this.lstZeminKat.TabIndex = 1;
             // 
             // lstBodrumKat
             // 
+            this.lstBodrumKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstBodrumKat.FormattingEnabled = true;
-            this.lstBodrumKat.Location = new System.Drawing.Point(532, 22);
+            this.lstBodrumKat.ItemHeight = 16;
+            this.lstBodrumKat.Location = new System.Drawing.Point(540, 42);
             this.lstBodrumKat.Name = "lstBodrumKat";
-            this.lstBodrumKat.Size = new System.Drawing.Size(178, 212);
+            this.lstBodrumKat.Size = new System.Drawing.Size(178, 260);
             this.lstBodrumKat.TabIndex = 1;
             // 
             // btnCikar
@@ -86,33 +95,72 @@
             // 
             // lstCikanBK
             // 
+            this.lstCikanBK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanBK.FormattingEnabled = true;
-            this.lstCikanBK.Location = new System.Drawing.Point(532, 253);
+            this.lstCikanBK.ItemHeight = 16;
+            this.lstCikanBK.Location = new System.Drawing.Point(540, 318);
             this.lstCikanBK.Name = "lstCikanBK";
-            this.lstCikanBK.Size = new System.Drawing.Size(178, 43);
+            this.lstCikanBK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanBK.TabIndex = 1;
             // 
             // lstCikanUK
             // 
+            this.lstCikanUK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanUK.FormattingEnabled = true;
-            this.lstCikanUK.Location = new System.Drawing.Point(128, 253);
+            this.lstCikanUK.ItemHeight = 16;
+            this.lstCikanUK.Location = new System.Drawing.Point(136, 318);
             this.lstCikanUK.Name = "lstCikanUK";
-            this.lstCikanUK.Size = new System.Drawing.Size(178, 43);
+            this.lstCikanUK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanUK.TabIndex = 1;
             // 
             // lstCikanZK
             // 
+            this.lstCikanZK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanZK.FormattingEnabled = true;
-            this.lstCikanZK.Location = new System.Drawing.Point(328, 253);
+            this.lstCikanZK.ItemHeight = 16;
+            this.lstCikanZK.Location = new System.Drawing.Point(336, 318);
             this.lstCikanZK.Name = "lstCikanZK";
-            this.lstCikanZK.Size = new System.Drawing.Size(178, 43);
+            this.lstCikanZK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanZK.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(187, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "ÜST KAT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(380, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ZEMİN KAT";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(573, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "BODRUM KAT";
             // 
             // frmAnaEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 372);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lstCikanZK);
             this.Controls.Add(this.lstCikanUK);
             this.Controls.Add(this.lstCikanBK);
@@ -125,6 +173,7 @@
             this.Name = "frmAnaEkran";
             this.Text = "ANA EKRAN";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,6 +187,9 @@
         private System.Windows.Forms.ListBox lstCikanBK;
         private System.Windows.Forms.ListBox lstCikanUK;
         private System.Windows.Forms.ListBox lstCikanZK;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

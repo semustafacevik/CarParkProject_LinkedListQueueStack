@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
@@ -11,23 +12,42 @@ namespace Otopark_LinkedQueueStack
 
         public override void InsertFirst(Araba yeniAraba)
         {
-            Node tmpHead = new Node();
-            tmpHead.Data = yeniAraba;
+            Node tempHead = new Node();
+            tempHead.Data = yeniAraba;
 
-            if(Head == null)
-            {
-                Head = tmpHead;
-                Last = Head;
-            }
+            Head = tempHead;
+            Last = Head;
+
+            size++;
+        }
+
+        public override void InsertLast(Araba yeniAraba)
+        {
+            Node oldLast = Head;
+
+            if (Head == null)
+                InsertFirst(yeniAraba);
 
             else
             {
-                tmpHead.Next = Head;
-                Last.Next = tmpHead;
-                Head = tmpHead;
-            }
+                Node newLast = new Node();
+                newLast.Data = yeniAraba;
 
-            size++;
+                while (oldLast != null)
+                {
+                    if (oldLast.Next != null && oldLast.Next != Head)
+                        oldLast = oldLast.Next;
+
+                    else
+                        break;
+                }
+
+                oldLast.Next = newLast;
+                Last = newLast;
+                newLast.Next = Head;
+
+                size++;
+            }
         }
 
         public override Node Delete() 
@@ -49,6 +69,39 @@ namespace Otopark_LinkedQueueStack
 
             return cikacakAraba;
         } // josephus problemine göre silme
+
+
+
+        public void ArabalariListele(ListBox lstListe)
+        {
+            lstListe.Items.Clear();
+
+            Node tempHead = Head;
+
+            do
+            {
+                if (tempHead == null)
+                    break;
+
+                else if (tempHead.Next != null)
+                {
+                    if (tempHead == Head.Next)
+                        lstListe.Items.Add("-> " + tempHead.Data.ad);
+
+                    else
+                        lstListe.Items.Add(tempHead.Data.ad);
+
+
+                    tempHead = tempHead.Next;
+                }
+
+                else
+                    break;
+
+
+            } while (tempHead != Head);
+        }
+
 
     }
 }

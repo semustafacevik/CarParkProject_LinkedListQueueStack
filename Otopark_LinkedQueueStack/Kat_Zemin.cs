@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
@@ -57,9 +58,36 @@ namespace Otopark_LinkedQueueStack
             return cikacakAraba;
         }
 
+        public Araba Peek()
+        {
+            return Kuyruk[front];
+        }
+
         public bool IsEmpty()
         {
             return (count == 0);
         }
+
+        public void ArabalariListele(ListBox lstListe)
+        {
+            lstListe.Items.Clear();
+
+            foreach (Araba arabalar in Kuyruk)
+            {
+                Araba cikacakAraba = Peek();
+
+                if (arabalar != null)
+                {
+                    if (arabalar == cikacakAraba)
+                        lstListe.Items.Add("-> " + arabalar.ad);
+
+                    else
+                        lstListe.Items.Add(arabalar.ad);
+                }
+                else
+                    break;
+            }
+        }
+
     }
 }

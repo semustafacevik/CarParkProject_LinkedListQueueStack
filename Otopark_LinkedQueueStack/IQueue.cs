@@ -10,6 +10,7 @@ namespace Otopark_LinkedQueueStack
     {
         void Insert(Araba yeniAraba);
         Araba Remove();
+        Araba Peek();
         Boolean IsEmpty();
     }
 }

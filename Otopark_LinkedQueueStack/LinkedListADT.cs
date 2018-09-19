@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
@@ -13,6 +14,7 @@ namespace Otopark_LinkedQueueStack
         public int size;
 
         public abstract void InsertFirst(Araba yeniAraba);
+        public abstract void InsertLast(Araba yeniAraba);
         public abstract Node Delete();
     }
 }

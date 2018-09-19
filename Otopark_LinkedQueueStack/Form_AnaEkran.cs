@@ -27,27 +27,41 @@ namespace Otopark_LinkedQueueStack
             zKat = new Kat_Zemin(15);
             bKat = new Kat_Bodrum(15);
 
-            ArabalariEkle();           
+            ArabalariEkle();
+            ArabalariListele();
         }
 
         private void btnCikar_Click(object sender, EventArgs e)
         {
-            lstCikanUK.Items.Clear();
-            lstCikanZK.Items.Clear();
-            lstCikanBK.Items.Clear();
+            ListeTemizle();
 
-            Node cikanArab = uKat.Delete();
-            lstCikanUK.Items.Add(cikanArab.Data.ad);
+            Araba cikanArabaZK = zKat.Remove();
+            lstCikanZK.Items.Add(cikanArabaZK.ad);
 
+            Random rand = new Random();
+            string[] katlar = { "ustkat", "bodrumkat" };
+            string cikacakKat = katlar[rand.Next(2)];
 
-            Araba cikanArabaa = zKat.Remove();
-            lstCikanZK.Items.Add(cikanArabaa.ad);
+            switch (cikacakKat)
+            {
+                case "ustkat":
+                    Node cikanDugum = uKat.Delete();
+                    Araba cikanArabaUK = cikanDugum.Data;
+                    lstCikanUK.Items.Add(cikanArabaUK.ad);
+                    lstCikanUK.BackColor = Color.LightGreen;
+                    zKat.Insert(cikanArabaUK);
+                    break;
 
+                default:
+                    Araba cikanArabaBK = bKat.Pop();
+                    lstCikanBK.Items.Add(cikanArabaBK.ad);
+                    lstCikanBK.BackColor = Color.LightGreen;
+                    zKat.Insert(cikanArabaBK);
+                    break;
+            }
 
-            Araba cikanAraba = bKat.Pop();
-            lstCikanBK.Items.Add(cikanAraba.ad);
+            ArabalariListele();
         }
-
 
         private void ArabalariEkle()
         {
@@ -64,28 +78,41 @@ namespace Otopark_LinkedQueueStack
                     {
                         case 1:
                             yeniAraba = new Araba();
-                            yeniAraba.ad = "UKat-" + renkler[renk];  // Üst Kat için -> UKat-Sarı...
-                            uKat.InsertFirst(yeniAraba);
-                            lstUstKat.Items.Add(yeniAraba.ad);
+                            yeniAraba.ad = "UKat-" + renkler[renk];  // Üst Kat için -> UKat-Yeşil...
+                            uKat.InsertLast(yeniAraba);
                             break;
 
                         case 0:
                             yeniAraba = new Araba();
-                            yeniAraba.ad = "ZKat-" + renkler[renk];  // Zemin Kat için -> ZKat-Sarı...
+                            yeniAraba.ad = "ZKat-" + renkler[renk];  // Zemin Kat için -> ZKat-Yeşil...
                             zKat.Insert(yeniAraba);
-                            lstZeminKat.Items.Add(yeniAraba.ad);
                             break;
 
                         default:
                             yeniAraba = new Araba();
-                            yeniAraba.ad = "BKat-" + renkler[renk]; // Bodrum Kat için -> BKat-Sarı...
+                            yeniAraba.ad = "BKat-" + renkler[renk]; // Bodrum Kat için -> BKat-Yeşil...
                             bKat.Push(yeniAraba);
-                            lstBodrumKat.Items.Add(yeniAraba.ad);
                             break;
                     }
                 }
             }
         }
 
+        private void ArabalariListele()
+        {
+            uKat.ArabalariListele(lstUstKat);
+            zKat.ArabalariListele(lstZeminKat);
+            bKat.ArabalariListele(lstBodrumKat);
+        }
+
+        private void ListeTemizle()
+        {
+            lstCikanUK.Items.Clear();
+            lstCikanZK.Items.Clear();
+            lstCikanBK.Items.Clear();
+
+            lstCikanBK.BackColor = Color.White;
+            lstCikanUK.BackColor = Color.White;
+        }
     }
 }

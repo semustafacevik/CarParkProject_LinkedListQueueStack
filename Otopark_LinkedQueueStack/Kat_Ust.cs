@@ -9,7 +9,6 @@ namespace Otopark_LinkedQueueStack
 {
     public class Kat_Ust : LinkedListADT
     {
-
         public override void InsertFirst(Araba yeniAraba)
         {
             Node tempHead = new Node();
@@ -59,6 +58,7 @@ namespace Otopark_LinkedQueueStack
 
             Head.Next = cikacakAraba.Next;
             Head = cikacakAraba.Next;
+
             size--;
 
             if (size == 0)
@@ -93,13 +93,12 @@ namespace Otopark_LinkedQueueStack
                     tempHead = tempHead.Next;
                 }
 
-                else
+                else // tempHead.Next == null
                     break;
 
 
             } while (tempHead != Head);
         }
-
 
     }
 }

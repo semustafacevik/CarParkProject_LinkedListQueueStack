@@ -24,6 +24,8 @@ namespace Otopark_LinkedQueueStack
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            Liste_VarsayilanRenkler();
+
             uKat = new Kat_Ust();
             zKat = new Kat_Zemin(15);
             bKat = new Kat_Bodrum(15);
@@ -36,27 +38,54 @@ namespace Otopark_LinkedQueueStack
 
         private void btnCikar_Click(object sender, EventArgs e)
         {
-            ListeTemizle();
+            btnEkle.Enabled = false;
 
             if (!zKat.IsEmpty())
             {
+                ListeTemizle();
+                Random rand = new Random();
+                string[] katlar = { "ustkat", "bodrumkat" };
+                string cikacakKat = katlar[rand.Next(2)];
+                cikacakKat = KatlariKontrolEt(cikacakKat);
+
                 Araba cikanArabaZK = zKat.Remove();
                 lstCikanZK.Items.Add(cikanArabaZK.ad);
+
+                switch (cikacakKat)
+                {
+                    case "ustkat":
+                        Node cikanDugum = uKat.Delete();
+                        Araba cikanArabaUK = cikanDugum.Data;
+                        lstCikanUK.Items.Add(cikanArabaUK.ad);
+                        lstCikanUK.BackColor = Color.LightGreen;
+                        zKat.Insert(cikanArabaUK);
+                        break;
+
+                    case "bodrumkat":
+                        Araba cikanArabaBK = bKat.Pop();
+                        lstCikanBK.Items.Add(cikanArabaBK.ad);
+                        lstCikanBK.BackColor = Color.LightGreen;
+                        zKat.Insert(cikanArabaBK);
+                        break;
+
+                    default:
+                        break;
+                }
             }
 
-            if (zKat.IsEmpty())
+            else
             {
                 lstZeminKat.BackColor = Color.Red;
-                lstCikanZK.BackColor = Color.LightGreen;
                 btnCikar.Enabled = false;
                 btnEkle.Enabled = true;
             }
 
-            Random rand = new Random();
-            string[] katlar = { "ustkat", "bodrumkat" };
-            string cikacakKat = katlar[0];
+            ArabalariListele();
+        }
 
 
+        private string KatlariKontrolEt(string cikacakKat)
+        {
             if (uKat.size == 0)
             {
                 cikacakKat = "bodrumkat";
@@ -72,31 +101,9 @@ namespace Otopark_LinkedQueueStack
             }
 
             if (uKat.size == 0 && bKat.IsEmpty())
-                cikacakKat = "z";
+                cikacakKat = "zeminkat";
 
-            switch (cikacakKat)
-            {
-                case "ustkat":
-                    Node cikanDugum = uKat.Delete();
-                    Araba cikanArabaUK = cikanDugum.Data;
-                    lstCikanUK.Items.Add(cikanArabaUK.ad);
-                    lstCikanUK.BackColor = Color.LightGreen;
-                    zKat.Insert(cikanArabaUK);
-                    break;
-
-                case "bodrumkat":
-                    Araba cikanArabaBK = bKat.Pop();
-                    lstCikanBK.Items.Add(cikanArabaBK.ad);
-                    lstCikanBK.BackColor = Color.LightGreen;
-                    zKat.Insert(cikanArabaBK);
-                    break;
-
-                default:
-                    break;
-            }
-
-            ArabalariListele();
-            btnEkle.Enabled = false;
+            return cikacakKat;
         }
 
         private void ArabalariEkle()
@@ -147,8 +154,18 @@ namespace Otopark_LinkedQueueStack
             lstCikanZK.Items.Clear();
             lstCikanBK.Items.Clear();
 
-            lstCikanBK.BackColor = Color.White;
             lstCikanUK.BackColor = Color.White;
+            lstCikanBK.BackColor = Color.White;
+        }
+
+        private void Liste_VarsayilanRenkler()
+        {
+            lstUstKat.BackColor = Color.White;
+            lstZeminKat.BackColor = Color.White;
+            lstBodrumKat.BackColor = Color.White;
+            lstCikanUK.BackColor = Color.White;
+            lstCikanBK.BackColor = Color.White;
+            lstCikanZK.Items.Clear();
         }
     }
 }

@@ -55,6 +55,7 @@ namespace Otopark_LinkedQueueStack
                 front++;
 
             count--;
+
             return cikacakAraba;
         }
 
@@ -72,20 +73,22 @@ namespace Otopark_LinkedQueueStack
         {
             lstListe.Items.Clear();
 
-            foreach (Araba arabalar in Kuyruk)
-            {
-                Araba siradakiAraba = Peek();
+            Araba siradakiAraba = Peek();
 
-                if (arabalar != null)
+            foreach (Araba araba in Kuyruk)
+            {
+                if (araba != null)
                 {
-                    if (arabalar == siradakiAraba)
-                        lstListe.Items.Add("-> " + arabalar.ad);
+                    if (araba == siradakiAraba)
+                        lstListe.Items.Add("-> " + araba.ad);
 
                     else
-                        lstListe.Items.Add(arabalar.ad);
+                        lstListe.Items.Add(araba.ad);
                 }
+
                 else
-                { }
+                {
+                }// diger arabalara gec
             }
         }
 

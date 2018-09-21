@@ -38,7 +38,11 @@ namespace Otopark_LinkedQueueStack
 
         public Araba Peek()
         {
-            return Yigin[Top];
+            if (Top != -1)
+                return Yigin[Top];
+
+            else
+                return null; // yigin bos
         }
 
         public int Top
@@ -58,27 +62,22 @@ namespace Otopark_LinkedQueueStack
         {
             lstListe.Items.Clear();
 
-            foreach (Araba arabalar in Yigin)
+            Araba siradakiAraba = Peek();
+
+            foreach (Araba araba in Yigin)
             {
-                Araba siradakiAraba;
-
-                if (Top == -1)
-                    siradakiAraba = null;
-                else
-                    siradakiAraba = Peek();
-
-                if (arabalar != null)
+                if (araba != null)
                 {
-                    if (arabalar == siradakiAraba)
-                        lstListe.Items.Add("-> " + arabalar.ad);
+                    if (araba == siradakiAraba)
+                        lstListe.Items.Add("-> " + araba.ad);
                     else
-                        lstListe.Items.Add(arabalar.ad);
+                        lstListe.Items.Add(araba.ad);
                 }
+
                 else
                     break;
             }
         }
-
 
     }
 }

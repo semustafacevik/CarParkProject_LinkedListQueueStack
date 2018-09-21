@@ -44,7 +44,7 @@
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(21, 22);
+            this.btnEkle.Location = new System.Drawing.Point(24, 28);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(88, 34);
             this.btnEkle.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.lstUstKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstUstKat.FormattingEnabled = true;
             this.lstUstKat.ItemHeight = 16;
-            this.lstUstKat.Location = new System.Drawing.Point(136, 42);
+            this.lstUstKat.Location = new System.Drawing.Point(136, 28);
             this.lstUstKat.Name = "lstUstKat";
             this.lstUstKat.Size = new System.Drawing.Size(178, 260);
             this.lstUstKat.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.lstZeminKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstZeminKat.FormattingEnabled = true;
             this.lstZeminKat.ItemHeight = 16;
-            this.lstZeminKat.Location = new System.Drawing.Point(336, 42);
+            this.lstZeminKat.Location = new System.Drawing.Point(336, 28);
             this.lstZeminKat.Name = "lstZeminKat";
             this.lstZeminKat.Size = new System.Drawing.Size(178, 260);
             this.lstZeminKat.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.lstBodrumKat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstBodrumKat.FormattingEnabled = true;
             this.lstBodrumKat.ItemHeight = 16;
-            this.lstBodrumKat.Location = new System.Drawing.Point(540, 42);
+            this.lstBodrumKat.Location = new System.Drawing.Point(540, 28);
             this.lstBodrumKat.Name = "lstBodrumKat";
             this.lstBodrumKat.Size = new System.Drawing.Size(178, 260);
             this.lstBodrumKat.TabIndex = 1;
@@ -85,7 +85,7 @@
             // btnCikar
             // 
             this.btnCikar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCikar.Location = new System.Drawing.Point(21, 70);
+            this.btnCikar.Location = new System.Drawing.Point(24, 76);
             this.btnCikar.Name = "btnCikar";
             this.btnCikar.Size = new System.Drawing.Size(88, 34);
             this.btnCikar.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.lstCikanBK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanBK.FormattingEnabled = true;
             this.lstCikanBK.ItemHeight = 16;
-            this.lstCikanBK.Location = new System.Drawing.Point(540, 318);
+            this.lstCikanBK.Location = new System.Drawing.Point(540, 310);
             this.lstCikanBK.Name = "lstCikanBK";
             this.lstCikanBK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanBK.TabIndex = 1;
@@ -108,7 +108,7 @@
             this.lstCikanUK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanUK.FormattingEnabled = true;
             this.lstCikanUK.ItemHeight = 16;
-            this.lstCikanUK.Location = new System.Drawing.Point(136, 318);
+            this.lstCikanUK.Location = new System.Drawing.Point(136, 310);
             this.lstCikanUK.Name = "lstCikanUK";
             this.lstCikanUK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanUK.TabIndex = 1;
@@ -118,7 +118,7 @@
             this.lstCikanZK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lstCikanZK.FormattingEnabled = true;
             this.lstCikanZK.ItemHeight = 16;
-            this.lstCikanZK.Location = new System.Drawing.Point(336, 318);
+            this.lstCikanZK.Location = new System.Drawing.Point(336, 310);
             this.lstCikanZK.Name = "lstCikanZK";
             this.lstCikanZK.Size = new System.Drawing.Size(178, 36);
             this.lstCikanZK.TabIndex = 1;
@@ -127,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(187, 22);
+            this.label3.Location = new System.Drawing.Point(187, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 2;
@@ -137,7 +137,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(380, 22);
+            this.label1.Location = new System.Drawing.Point(380, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
             this.label1.TabIndex = 2;
@@ -147,7 +147,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(573, 22);
+            this.label2.Location = new System.Drawing.Point(573, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 2;

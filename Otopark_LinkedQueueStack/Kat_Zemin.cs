@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,13 @@ namespace Otopark_LinkedQueueStack
         private int rear = -1;
         private int size = 0;
         private int count = 0;
+        public Stopwatch sure;
 
         public Kat_Zemin(int arabaSayisi)
         {
+            sure = new Stopwatch();
             size = arabaSayisi;
-            Kuyruk = new Araba[size];
+            Kuyruk = new Araba[size];          
         }
 
         public void Insert(Araba yeniAraba)
@@ -45,6 +48,7 @@ namespace Otopark_LinkedQueueStack
 
         public Araba Remove()
         {
+            sure.Start();
             Araba cikacakAraba = Kuyruk[front];
             Kuyruk[front] = null;
 
@@ -56,6 +60,7 @@ namespace Otopark_LinkedQueueStack
 
             count--;
 
+            sure.Stop();
             return cikacakAraba;
         }
 
@@ -90,6 +95,13 @@ namespace Otopark_LinkedQueueStack
                 {
                 }// diger arabalara gec
             }
+        }
+
+        public double ArabaCikisSuresi()
+        {
+            double sure;
+            sure = this.sure.Elapsed.TotalSeconds;
+            return sure;
         }
 
     }

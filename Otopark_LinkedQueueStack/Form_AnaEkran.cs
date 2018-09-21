@@ -16,6 +16,7 @@ namespace Otopark_LinkedQueueStack
         {
             InitializeComponent();
             btnCikar.Enabled = false;
+            btnHesapla.Enabled = false;
         }
 
         private Kat_Ust uKat;
@@ -25,20 +26,19 @@ namespace Otopark_LinkedQueueStack
         private void btnEkle_Click(object sender, EventArgs e)
         {
             Liste_VarsayilanRenkler();
-
-            uKat = new Kat_Ust();
-            zKat = new Kat_Zemin(15);
-            bKat = new Kat_Bodrum(15);
-
-            ArabalariEkle();
-            ArabalariListele();
+            btnHesapla.Enabled = false;
             btnCikar.Enabled = true;
             btnEkle.Enabled = false;
+
+            IlgiliNesneleriUret();
+            ArabalariEkle();
+            ArabalariListele();
         }
 
         private void btnCikar_Click(object sender, EventArgs e)
         {
             btnEkle.Enabled = false;
+            btnHesapla.Enabled = true;
 
             if (!zKat.IsEmpty())
             {
@@ -83,6 +83,25 @@ namespace Otopark_LinkedQueueStack
             ArabalariListele();
         }
 
+        private void btnHesapla_Click(object sender, EventArgs e)
+        {
+            btnHesapla.Enabled = false;
+
+            double islemSayisi;
+            double islemSuresi;
+            islemSuresi = zKat.ArabaCikisSuresi();
+            islemSayisi = 5 / islemSuresi;
+            islemSayisi = Math.Round(islemSayisi, 2);
+
+            txtHesaplanan.Text = "Bilgisayarın 5 saniyede çözebileceği otopark problemi sayısı: \r\n" + islemSayisi;
+        }
+     
+        private void IlgiliNesneleriUret()
+        {
+            uKat = new Kat_Ust();
+            zKat = new Kat_Zemin(15);
+            bKat = new Kat_Bodrum(15);
+        }
 
         private string KatlariKontrolEt(string cikacakKat)
         {
@@ -153,6 +172,7 @@ namespace Otopark_LinkedQueueStack
             lstCikanUK.Items.Clear();
             lstCikanZK.Items.Clear();
             lstCikanBK.Items.Clear();
+            txtHesaplanan.Clear();
 
             lstCikanUK.BackColor = Color.White;
             lstCikanBK.BackColor = Color.White;
@@ -166,6 +186,8 @@ namespace Otopark_LinkedQueueStack
             lstCikanUK.BackColor = Color.White;
             lstCikanBK.BackColor = Color.White;
             lstCikanZK.Items.Clear();
+            txtHesaplanan.Clear();
         }
+
     }
 }

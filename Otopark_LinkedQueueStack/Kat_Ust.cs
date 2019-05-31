@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
-    public class Kat_Ust : LinkedListADT
+    public class Kat_Ust : LinkedListADT // LinkedList türündeki üst kat
     {
         public override void InsertFirst(Araba yeniAraba)
         {
@@ -68,7 +68,7 @@ namespace Otopark_LinkedQueueStack
             }
 
             return cikacakAraba;
-        } // josephus problemine göre silme
+        } // LinkedList ten araba silme işlmei josephus problemine yapılmıştır
 
         public void ArabalariListele(ListBox lstListe)
         {

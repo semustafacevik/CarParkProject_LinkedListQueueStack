@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
-    public class Kat_Zemin : IQueue
+    public class Kat_Zemin : IQueue // Kuyruk türündeki zemin kat
     {
         public Araba[] Kuyruk;
         private int front = -1;
@@ -97,6 +97,10 @@ namespace Otopark_LinkedQueueStack
             }
         }
 
+        /// <summary>
+        /// Bilgisayarın belirli sürede kaç adet otopark problemi çözeceğine dair sürenin saklandığı fonksiyon
+        /// </summary>
+        /// <returns>İlgili süre</returns>
         public double ArabaCikisSuresi()
         {
             double sure;

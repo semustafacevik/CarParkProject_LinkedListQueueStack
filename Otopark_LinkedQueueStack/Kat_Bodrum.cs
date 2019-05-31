@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Otopark_LinkedQueueStack
 {
-    public class Kat_Bodrum : IStack
+    public class Kat_Bodrum : IStack // Stack türündeki bodrum kat
     {
         public Araba[] Yigin;
         private int _top = -1;
@@ -16,7 +16,7 @@ namespace Otopark_LinkedQueueStack
         {
             Yigin = new Araba[arabaSayisi];
         }
-
+        
         public void Push(Araba yeniAraba)
         {
             Yigin[++Top] = yeniAraba;
@@ -42,7 +42,7 @@ namespace Otopark_LinkedQueueStack
                 return Yigin[Top];
 
             else
-                return null; // yigin bos
+                return null; // stack boş
         }
 
         public int Top

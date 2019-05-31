@@ -8,3 +8,13 @@ C:\Users\MustafaCevik\source\repos\Otopark_LinkedQueueStack\Otopark_LinkedQueueS
 C:\Users\MustafaCevik\source\repos\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.csproj.CoreCompileInputs.cache
 C:\Users\MustafaCevik\source\repos\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.exe
 C:\Users\MustafaCevik\source\repos\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.pdb
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\bin\Debug\Otopark_LinkedQueueStack.exe.config
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\bin\Debug\Otopark_LinkedQueueStack.exe
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\bin\Debug\Otopark_LinkedQueueStack.pdb
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.csprojAssemblyReference.cache
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.frmAnaEkran.resources
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.Properties.Resources.resources
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.csproj.GenerateResource.cache
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.csproj.CoreCompileInputs.cache
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.exe
+C:\Users\MustafaCevik\source\repos\_Projects\Otopark_LinkedQueueStack\Otopark_LinkedQueueStack\obj\Debug\Otopark_LinkedQueueStack.pdb
